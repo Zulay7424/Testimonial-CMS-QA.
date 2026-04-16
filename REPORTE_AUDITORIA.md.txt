@@ -1,0 +1,11 @@
+# Informe de Entrega QA - Zulay Peraza
+
+## Gestión en Jira
+Se utilizó Jira para la planificación de las 4 épicas del proyecto. 
+* **Evidencia:** Ver detalles en el archivo `EnlaceJiraZulayPeraza.txt`.
+* **Acceso:** [Tablero de Gestión](https://zulayperaza.atlassian.net)
+
+## Ejecución en Postman
+Se validó la ruta crítica (Auth y CRUD) mediante pruebas de API.
+* **Archivo técnico:** `TESTIMONIAL CMS-ZULAY PERAZA.postman_collection.json`
+* **Hallazgo:** Bloqueo en HU 2.3 documentado en el tablero.

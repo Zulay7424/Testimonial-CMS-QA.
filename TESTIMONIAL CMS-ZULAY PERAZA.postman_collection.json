@@ -1,0 +1,1783 @@
+{
+  "info": {
+    "_postman_id": "ba3219fb-ee7f-4d54-b0ef-c2723d2f57da",
+    "name": "TESTIMONIAL CMS-ZULAY PERAZA",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "33599363"
+  },
+  "item": [
+    {
+      "name": "Épica 1: Gestión de Usuarios y Seguridad",
+      "item": [
+        {
+          "name": "HU 1.1: Recuperación de contraseña",
+          "item": [
+            {
+              "name": "CP-001: Bloqueo de envío - Correo inexistente",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "\r\n{\r\n  \"email\": \"user@example.com\"\r\n}\r\n\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://s03-26-equipo-14-web-app-development.onrender.com/auth/forgot-password",
+                  "protocol": "https",
+                  "host": [
+                    "s03-26-equipo-14-web-app-development",
+                    "onrender",
+                    "com"
+                  ],
+                  "path": [
+                    "auth",
+                    "forgot-password"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Exito- Correo inexistente",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "\r\n{\r\n  \"email\": \"user@example.com\"\r\n}\r\n\r\n",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "https://s03-26-equipo-14-web-app-development.onrender.com/auth/forgot-password",
+                      "protocol": "https",
+                      "host": [
+                        "s03-26-equipo-14-web-app-development",
+                        "onrender",
+                        "com"
+                      ],
+                      "path": [
+                        "auth",
+                        "forgot-password"
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": ":status",
+                      "value": 201
+                    },
+                    {
+                      "key": "date",
+                      "value": "Sun, 12 Apr 2026 12:09:28 GMT"
+                    },
+                    {
+                      "key": "content-type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "content-length",
+                      "value": "51"
+                    },
+                    {
+                      "key": "access-control-allow-credentials",
+                      "value": "true"
+                    },
+                    {
+                      "key": "content-encoding",
+                      "value": "br"
+                    },
+                    {
+                      "key": "etag",
+                      "value": "W/\"47-46F4PGLdvwcucXlWD804MJAv7Ng\""
+                    },
+                    {
+                      "key": "rndr-id",
+                      "value": "1651988e-d0cb-499b"
+                    },
+                    {
+                      "key": "vary",
+                      "value": "Origin, Accept-Encoding"
+                    },
+                    {
+                      "key": "x-powered-by",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "x-render-origin-server",
+                      "value": "Render"
+                    },
+                    {
+                      "key": "cf-cache-status",
+                      "value": "DYNAMIC"
+                    },
+                    {
+                      "key": "server",
+                      "value": "cloudflare"
+                    },
+                    {
+                      "key": "cf-ray",
+                      "value": "9eb21f49b89fd22c-EZE"
+                    },
+                    {
+                      "key": "alt-svc",
+                      "value": "h3=\":443\"; ma=86400"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"success\": true,\n    \"message\": \"Email sent\",\n    \"data\": {\n        \"message\": \"Email sent\"\n    }\n}"
+                }
+              ]
+            },
+            {
+              "name": "CP-002: Validación de Expiración de Token",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiIsInR...",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "                                       \r\n{\r\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiMGYyMWNlNS01NDIyLTQyOTgtYjExMC1lYzkwNzZlY2Y1NjIiLCJlbWFpbCI6InVzZXJAZXhhbXBsZS5jb20iLCJvcmdhbml6YXRpb25JZCI6IjQ1NTI5OGQ5LTExMDItNDdhYy04ZWMwLWYzMGJlN2E4ZTI1YiIsInJvbGUiOiJPd25lciIsImlhdCI6MTc3NjEwMzQxN3wiZXhwIjoxNzc2MTg5ODE3fQ.Pd25lcilsImlhdCI6MTc3NjEwMzQxN3wiZXhwIjo5REZsQjFNYm9wUnRjeFpwUWM\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://s03-26-equipo-14-web-app-development.onrender.com/auth/validate-token?email=user@example.com",
+                  "protocol": "https",
+                  "host": [
+                    "s03-26-equipo-14-web-app-development",
+                    "onrender",
+                    "com"
+                  ],
+                  "path": [
+                    "auth",
+                    "validate-token"
+                  ],
+                  "query": [
+                    {
+                      "key": "email",
+                      "value": "user@example.com"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Exito - Token expirado detectado",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "                                       \r\n{\r\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiMGYyMWNlNS01NDIyLTQyOTgtYjExMC1lYzkwNzZlY2Y1NjIiLCJlbWFpbCI6InVzZXJAZXhhbXBsZS5jb20iLCJvcmdhbml6YXRpb25JZCI6IjQ1NTI5OGQ5LTExMDItNDdhYy04ZWMwLWYzMGJlN2E4ZTI1YiIsInJvbGUiOiJPd25lciIsImlhdCI6MTc3NjEwMzQxN3wiZXhwIjoxNzc2MTg5ODE3fQ.Pd25lcilsImlhdCI6MTc3NjEwMzQxN3wiZXhwIjo5REZsQjFNYm9wUnRjeFpwUWM\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "https://s03-26-equipo-14-web-app-development.onrender.com/auth/validate-token?email=user@example.com",
+                      "protocol": "https",
+                      "host": [
+                        "s03-26-equipo-14-web-app-development",
+                        "onrender",
+                        "com"
+                      ],
+                      "path": [
+                        "auth",
+                        "validate-token"
+                      ],
+                      "query": [
+                        {
+                          "key": "email",
+                          "value": "user@example.com"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Bad Request",
+                  "code": 400,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": ":status",
+                      "value": 400
+                    },
+                    {
+                      "key": "date",
+                      "value": "Sun, 12 Apr 2026 16:30:15 GMT"
+                    },
+                    {
+                      "key": "content-type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "content-length",
+                      "value": "67"
+                    },
+                    {
+                      "key": "access-control-allow-credentials",
+                      "value": "true"
+                    },
+                    {
+                      "key": "content-encoding",
+                      "value": "br"
+                    },
+                    {
+                      "key": "etag",
+                      "value": "W/\"42-aMaVtD38ltDSeEW4HkvSzYulxQg\""
+                    },
+                    {
+                      "key": "rndr-id",
+                      "value": "535c787c-7ba4-482e"
+                    },
+                    {
+                      "key": "vary",
+                      "value": "Origin, Accept-Encoding"
+                    },
+                    {
+                      "key": "x-powered-by",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "x-render-origin-server",
+                      "value": "Render"
+                    },
+                    {
+                      "key": "cf-cache-status",
+                      "value": "DYNAMIC"
+                    },
+                    {
+                      "key": "server",
+                      "value": "cloudflare"
+                    },
+                    {
+                      "key": "cf-ray",
+                      "value": "9eb39d4eaa4f8e4f-EZE"
+                    },
+                    {
+                      "key": "alt-svc",
+                      "value": "h3=\":443\"; ma=86400"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"message\": \"Token expired\",\n    \"error\": \"Bad Request\",\n    \"statusCode\": 400\n}"
+                }
+              ]
+            },
+            {
+              "name": "CP-003 Validacion de cambio de contraseña token valido",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"token\": \"TOKEN_RECIEN_GENERADO\",\r\n    \"new_password\": \"NuevaClaveSegura2026!\",\r\n    \"tester\": \"Zulay Peraza\"\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://testimonial-cms-alpha.vercel.app/api/auth/reset-password",
+                  "protocol": "https",
+                  "host": [
+                    "testimonial-cms-alpha",
+                    "vercel",
+                    "app"
+                  ],
+                  "path": [
+                    "api",
+                    "auth",
+                    "reset-password"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Hallazgo - Método POST no soportado",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n  \"token\": \"token-de-prueba-123\",\r\n  \"newPassword\": \"PasswordNueva2026!\",\r\n  \"confirmPassword\": \"PasswordNueva2026!\"\r\n}\r\n",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "https://cms-14-dev.vercel.app/api/auth/reset-password",
+                      "protocol": "https",
+                      "host": [
+                        "cms-14-dev",
+                        "vercel",
+                        "app"
+                      ],
+                      "path": [
+                        "api",
+                        "auth",
+                        "reset-password"
+                      ]
+                    }
+                  },
+                  "status": "Bad Request",
+                  "code": 400,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": ":status",
+                      "value": 400
+                    },
+                    {
+                      "key": "cache-control",
+                      "value": "public, max-age=0, must-revalidate"
+                    },
+                    {
+                      "key": "content-type",
+                      "value": "text/plain;charset=UTF-8"
+                    },
+                    {
+                      "key": "date",
+                      "value": "Mon, 13 Apr 2026 14:19:20 GMT"
+                    },
+                    {
+                      "key": "server",
+                      "value": "Vercel"
+                    },
+                    {
+                      "key": "strict-transport-security",
+                      "value": "max-age=63072000; includeSubDomains; preload"
+                    },
+                    {
+                      "key": "x-matched-path",
+                      "value": "/api/auth/[...nextauth]"
+                    },
+                    {
+                      "key": "x-vercel-cache",
+                      "value": "MISS"
+                    },
+                    {
+                      "key": "x-vercel-id",
+                      "value": "gru1::iad1::d4wl2-1776089959910-4e8d32832764"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "Error: This action with HTTP POST is not supported by NextAuth.js"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "HU 1.2: Inicio de Sesión (Login",
+          "item": [
+            {
+              "name": "CP-004: Inicio de sesion exitoso.",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "\r\n{\r\n  \"email\": \"user@example.com\",\r\n  \"password\": \"string\"\r\n}\r\n\r\n\r\n\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://s03-26-equipo-14-web-app-development.onrender.com/auth/login",
+                  "protocol": "https",
+                  "host": [
+                    "s03-26-equipo-14-web-app-development",
+                    "onrender",
+                    "com"
+                  ],
+                  "path": [
+                    "auth",
+                    "login"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Exito - Inicio de sesion exitoso.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "\r\n{\r\n  \"email\": \"user@example.com\",\r\n  \"password\": \"string\"\r\n}\r\n\r\n\r\n",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "https://s03-26-equipo-14-web-app-development.onrender.com/auth/login",
+                      "protocol": "https",
+                      "host": [
+                        "s03-26-equipo-14-web-app-development",
+                        "onrender",
+                        "com"
+                      ],
+                      "path": [
+                        "auth",
+                        "login"
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": ":status",
+                      "value": 201
+                    },
+                    {
+                      "key": "date",
+                      "value": "Sat, 11 Apr 2026 22:14:11 GMT"
+                    },
+                    {
+                      "key": "content-type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "content-length",
+                      "value": "55"
+                    },
+                    {
+                      "key": "access-control-allow-credentials",
+                      "value": "true"
+                    },
+                    {
+                      "key": "content-encoding",
+                      "value": "br"
+                    },
+                    {
+                      "key": "etag",
+                      "value": "W/\"53-DwkIYWQ6tfm10y6BW+ukVQ7ZIJs\""
+                    },
+                    {
+                      "key": "rndr-id",
+                      "value": "de3a8ced-9a83-48d4"
+                    },
+                    {
+                      "key": "set-cookie",
+                      "value": "CMS_ACCESS_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiMGYyMWNlNS01NDIyLTQyOTgtYjExMC1lYzkwNzZlY2Y1NjIiLCJlbWFpbCI6InVzZXJAZXhhbXBsZS5jb20iLCJvcmdhbml6YXRpb25JZCI6IjQ1NTI5OGQ5LTExMDItNDdhYy04ZWMwLWYzMGJlN2E4ZTI1YiIsInJvbGUiOiJPd25lciIsImlhdCI6MTc3NTk0NTY1MSwiZXhwIjoxNzc2MDMyMDUxfQ.ViD_srzbtxyGT_8Y8hZGzX1A0IG44n5pvg4-0nn4Oq4; Max-Age=86400; Path=/; Expires=Sun, 12 Apr 2026 22:14:11 GMT; HttpOnly; SameSite=Lax"
+                    },
+                    {
+                      "key": "vary",
+                      "value": "Origin, Accept-Encoding"
+                    },
+                    {
+                      "key": "x-powered-by",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "x-render-origin-server",
+                      "value": "Render"
+                    },
+                    {
+                      "key": "cf-cache-status",
+                      "value": "DYNAMIC"
+                    },
+                    {
+                      "key": "server",
+                      "value": "cloudflare"
+                    },
+                    {
+                      "key": "cf-ray",
+                      "value": "9ead57bc3808b64d-EZE"
+                    },
+                    {
+                      "key": "alt-svc",
+                      "value": "h3=\":443\"; ma=86400"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"success\": true,\n    \"message\": \"Login successful\",\n    \"data\": {\n        \"message\": \"Login successful\"\n    }\n}"
+                }
+              ]
+            },
+            {
+              "name": "CP-005: Verificar cierre de sesión",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiIsInR...",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/auth/logout",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "auth",
+                    "logout"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Bloqueo - Servidor local no disponible",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n  \"token\": \"AQUÍ_PEGA_TU_TOKEN_DE_AYER\"\r\n}\r\n",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "https://s03-26-equipo-14-web-app-development.onrender.com/auth/logout",
+                      "protocol": "https",
+                      "host": [
+                        "s03-26-equipo-14-web-app-development",
+                        "onrender",
+                        "com"
+                      ],
+                      "path": [
+                        "auth",
+                        "logout"
+                      ]
+                    }
+                  },
+                  "status": "Not Found",
+                  "code": 404,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": ":status",
+                      "value": 404
+                    },
+                    {
+                      "key": "date",
+                      "value": "Mon, 13 Apr 2026 14:27:42 GMT"
+                    },
+                    {
+                      "key": "content-type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "content-length",
+                      "value": "73"
+                    },
+                    {
+                      "key": "access-control-allow-credentials",
+                      "value": "true"
+                    },
+                    {
+                      "key": "content-encoding",
+                      "value": "br"
+                    },
+                    {
+                      "key": "etag",
+                      "value": "W/\"4b-/z261uvrd4sUGUh01QcGZEOBNLY\""
+                    },
+                    {
+                      "key": "rndr-id",
+                      "value": "47607a69-acaa-4fde"
+                    },
+                    {
+                      "key": "vary",
+                      "value": "Origin, Accept-Encoding"
+                    },
+                    {
+                      "key": "x-powered-by",
+                      "value": "Express"
+                    },
+                    {
+                      "key": "x-render-origin-server",
+                      "value": "Render"
+                    },
+                    {
+                      "key": "cf-cache-status",
+                      "value": "DYNAMIC"
+                    },
+                    {
+                      "key": "server",
+                      "value": "cloudflare"
+                    },
+                    {
+                      "key": "cf-ray",
+                      "value": "9ebb2729af46ab37-EZE"
+                    },
+                    {
+                      "key": "alt-svc",
+                      "value": "h3=\":443\"; ma=86400"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"message\": \"Cannot POST /auth/logout\",\n    \"error\": \"Not Found\",\n    \"statusCode\": 404\n}"
+                }
+              ]
+            },
+            {
+              "name": "CP-006: Validar creación de Organización y Project_ID",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      "pm.test(\"Status code es 201 (Creado)\", function () {\r",
+                      "    pm.response.to.have.status(201);\r",
+                      "});\r",
+                      "\r",
+                      "pm.test(\"La respuesta contiene organization_id y project_id\", function () {\r",
+                      "    var jsonData = pm.response.json();\r",
+                      "    pm.expect(jsonData).to.have.property('organization_id');\r",
+                      "    pm.expect(jsonData).to.have.property('project_id');\r",
+                      "});"
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                }
+              ],
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"m.silva.test2026@gmail.com\",\r\n    \"password\": \"SecurityTest2026!\",\r\n    \"fullName\": \"Maria Silva\",\r\n    \"organizationName\": \"Zulay Tech Solutions\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://cms-14-dev.vercel.app/api/register",
+                  "protocol": "https",
+                  "host": [
+                    "cms-14-dev",
+                    "vercel",
+                    "app"
+                  ],
+                  "path": [
+                    "api",
+                    "register"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Bloqueo - Servidor local no disponible",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"email\": \"m.silva.test2026@gmail.com\",\r\n    \"password\": \"SecurityTest2026!\",\r\n    \"fullName\": \"Maria Silva\",\r\n    \"organizationName\": \"Zulay Tech Solutions\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "https://cms-14-dev.vercel.app/api/auth/register-member",
+                      "protocol": "https",
+                      "host": [
+                        "cms-14-dev",
+                        "vercel",
+                        "app"
+                      ],
+                      "path": [
+                        "api",
+                        "auth",
+                        "register-member"
+                      ]
+                    }
+                  },
+                  "status": "Bad Request",
+                  "code": 400,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": ":status",
+                      "value": 400
+                    },
+                    {
+                      "key": "cache-control",
+                      "value": "public, max-age=0, must-revalidate"
+                    },
+                    {
+                      "key": "content-type",
+                      "value": "text/plain;charset=UTF-8"
+                    },
+                    {
+                      "key": "date",
+                      "value": "Mon, 13 Apr 2026 12:49:29 GMT"
+                    },
+                    {
+                      "key": "server",
+                      "value": "Vercel"
+                    },
+                    {
+                      "key": "strict-transport-security",
+                      "value": "max-age=63072000; includeSubDomains; preload"
+                    },
+                    {
+                      "key": "x-matched-path",
+                      "value": "/api/auth/[...nextauth]"
+                    },
+                    {
+                      "key": "x-vercel-cache",
+                      "value": "MISS"
+                    },
+                    {
+                      "key": "x-vercel-id",
+                      "value": "gru1::iad1::dxhtr-1776084569602-3299a86145e7"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "Error: This action with HTTP POST is not supported by NextAuth.js"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "HU 1.3: Registro de nuevo Usuario (Owner/Admin)",
+      "item": [
+        {
+          "name": "CP-007: Validar creación de organización y project_id",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Cookie",
+                "value": "",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "\r\n{\r\n  \"email\": \"maria.silva.test2026@gmail.com\",\r\n  \"password\": \"SecurityTest2026!\",\r\n  \"name\": \"Maria Silva\",\r\n  \"organizationName\": \"Zulay Tech Solutions\",\r\n  \"organizationDescription\": \"QA Testing de CMS\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://cms-14-dev.vercel.app/api/auth/owner",
+              "protocol": "https",
+              "host": [
+                "cms-14-dev",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "owner"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Hallazgo - POST no soportado por NextAuth",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Cookie",
+                    "value": "",
+                    "type": "text",
+                    "disabled": true
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "\r\n{\r\n  \"email\": \"maria.silva.test2026@gmail.com\",\r\n  \"password\": \"SecurityTest2026!\",\r\n  \"name\": \"Maria Silva\",\r\n  \"organizationName\": \"Zulay Tech Solutions\",\r\n  \"organizationDescription\": \"QA Testing de CMS\"\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://cms-14-dev.vercel.app/api/auth/owner",
+                  "protocol": "https",
+                  "host": [
+                    "cms-14-dev",
+                    "vercel",
+                    "app"
+                  ],
+                  "path": [
+                    "api",
+                    "auth",
+                    "owner"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 400
+                },
+                {
+                  "key": "cache-control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "content-type",
+                  "value": "text/plain;charset=UTF-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 13 Apr 2026 13:55:50 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "x-matched-path",
+                  "value": "/api/auth/[...nextauth]"
+                },
+                {
+                  "key": "x-vercel-cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "x-vercel-id",
+                  "value": "gru1::iad1::r859m-1776088550324-a717fa4ac2d6"
+                }
+              ],
+              "cookie": [],
+              "body": "Error: This action with HTTP POST is not supported by NextAuth.js"
+            }
+          ]
+        },
+        {
+          "name": "CP-008: Verificar rol de \"Owner\" al primer registro",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": [
+            {
+              "name": "Bloqueo - Dependencia de funcionalidad fallida (CP-007)",
+              "originalRequest": {
+                "method": "GET",
+                "header": []
+              },
+              "_postman_previewlanguage": null,
+              "header": null,
+              "cookie": [],
+              "body": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "HU 2.1: Creación de testimonios (Dashboard)",
+      "item": [
+        {
+          "name": "CP-009: Validar campos dinámicos",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "\r\n{\r\n  \"type\": \"quote\",\r\n  \"projectId\": \"6dddd0e0-6b0a-491c-ac84-bb05cb039c82\",\r\n  \"content\": \"Validación final con el formato sugerido por el equipo de desarrollo.\",\r\n  \"author\": \"Zulay Peraza\",\r\n  \"authorRole\": \"QA Tester\",\r\n  \"authorPhoto\": \"\",\r\n  \"mediaUrl\": \"\",\r\n  \"rating\": 5\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://s03-26-equipo-14-web-app-development.onrender.com/testimonials/quote",
+              "protocol": "https",
+              "host": [
+                "s03-26-equipo-14-web-app-development",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "testimonials",
+                "quote"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Hallazgo - Método no soportado / Bloqueo de conexión",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "\r\n{\r\n  \"type\": \"quote\",\r\n  \"projectId\": \"6dddd0e0-6b0a-491c-ac84-bb05cb039c82\",\r\n  \"content\": \"Validación final con el formato sugerido por el equipo de desarrollo.\",\r\n  \"author\": \"Zulay Peraza\",\r\n  \"authorRole\": \"QA Tester\",\r\n  \"authorPhoto\": \"\",\r\n  \"mediaUrl\": \"\",\r\n  \"rating\": 5\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://s03-26-equipo-14-web-app-development.onrender.com/testimonials/quote",
+                  "protocol": "https",
+                  "host": [
+                    "s03-26-equipo-14-web-app-development",
+                    "onrender",
+                    "com"
+                  ],
+                  "path": [
+                    "testimonials",
+                    "quote"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 201
+                },
+                {
+                  "key": "date",
+                  "value": "Sat, 11 Apr 2026 16:54:11 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "353"
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "content-encoding",
+                  "value": "br"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"22d-CpAnRRiAu2IZCkuPVm0r2RMNCeY\""
+                },
+                {
+                  "key": "rndr-id",
+                  "value": "19cec8a7-2a3d-4705"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Accept-Encoding"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-render-origin-server",
+                  "value": "Render"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "cf-ray",
+                  "value": "9eab83029bf7b64d-EZE"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=86400"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"ok\",\n    \"data\": {\n        \"id\": \"a054f56c-a9f4-4c97-bb7a-ad44cae8f7a4\",\n        \"type\": \"quote\",\n        \"title\": null,\n        \"content\": \"Validación final con el formato sugerido por el equipo de desarrollo.\",\n        \"author\": \"Zulay Peraza\",\n        \"author_photo\": \"\",\n        \"author_role\": \"QA Tester\",\n        \"media_url\": \"\",\n        \"media_description\": null,\n        \"status\": \"pending\",\n        \"rating\": \"5\",\n        \"slug\": null,\n        \"rejectedReason\": null,\n        \"created_at\": \"2026-04-11T16:54:11.748Z\",\n        \"updated_at\": \"2026-04-11T16:54:11.748Z\",\n        \"published_at\": null,\n        \"category_id\": null,\n        \"member_id\": null,\n        \"project_id\": \"6dddd0e0-6b0a-491c-ac84-bb05cb039c82\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "CP-010: Crear Testimonio CASE",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "\r\n{\r\n    \"type\": \"case\",\r\n    \"memberId\": \"4f815158-50cb-43ad-aec0-a38354cb70e0\",\r\n    \"projectId\": \"6dddd0e0-6b0a-491c-ac84-bb05cb039c82\",\r\n    \"categoryId\": \"a25fd169-5fea-4e4d-93ec-85174d718f84\",\r\n    \"tags\": [\r\n        \"46be3a00-2424-4a77-ade8-f7374bf9c944\",\r\n        \"825ca33b-5fe2-4f42-b4e1-36922d25ee79\"\r\n    ],\r\n    \"author\": \"Mariana Rodriguez\",\r\n    \"authorRole\": \"Coordinadora Académica\",\r\n    \"authorPhoto\": \"\",\r\n    \"title\": \"Impacto de la simulación en QA\",\r\n    \"content\": \"Excelente experiencia validando flujos complejos con el equipo de desarrollo.\",\r\n    \"mediaUrl\": \"\",\r\n    \"mediaDescription\": \"Captura de pantalla del dashboard\",\r\n    \"slug\": \"impacto-simulacion-qa-final\",\r\n    \"status\": \"pending\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://s03-26-equipo-14-web-app-development.onrender.com/testimonials",
+              "protocol": "https",
+              "host": [
+                "s03-26-equipo-14-web-app-development",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "testimonials"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Éxito - Creación Case",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "\r\n{\r\n    \"type\": \"case\",\r\n    \"memberId\": \"4f815158-50cb-43ad-aec0-a38354cb70e0\",\r\n    \"projectId\": \"6dddd0e0-6b0a-491c-ac84-bb05cb039c82\",\r\n    \"categoryId\": \"a25fd169-5fea-4e4d-93ec-85174d718f84\",\r\n    \"tags\": [\r\n        \"46be3a00-2424-4a77-ade8-f7374bf9c944\",\r\n        \"825ca33b-5fe2-4f42-b4e1-36922d25ee79\"\r\n    ],\r\n    \"author\": \"Mariana Rodriguez\",\r\n    \"authorRole\": \"Coordinadora Académica\",\r\n    \"authorPhoto\": \"\",\r\n    \"title\": \"Impacto de la simulación en QA\",\r\n    \"content\": \"Excelente experiencia validando flujos complejos con el equipo de desarrollo.\",\r\n    \"mediaUrl\": \"\",\r\n    \"mediaDescription\": \"Captura de pantalla del dashboard\",\r\n    \"slug\": \"impacto-simulacion-qa-final\",\r\n    \"status\": \"pending\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://s03-26-equipo-14-web-app-development.onrender.com/testimonials",
+                  "protocol": "https",
+                  "host": [
+                    "s03-26-equipo-14-web-app-development",
+                    "onrender",
+                    "com"
+                  ],
+                  "path": [
+                    "testimonials"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 201
+                },
+                {
+                  "key": "date",
+                  "value": "Sat, 11 Apr 2026 17:12:10 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "35"
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "content-encoding",
+                  "value": "br"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"1f-oO6VJivIcG+hUB8ipvmmO+bNftY\""
+                },
+                {
+                  "key": "rndr-id",
+                  "value": "f997a50f-8bfb-4a3c"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Accept-Encoding"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-render-origin-server",
+                  "value": "Render"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "cf-ray",
+                  "value": "9eab9d561d01ab1d-EZE"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=86400"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"ok\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "CP-011: Listar todos los Testimonios",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR...",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://s03-26-equipo-14-web-app-development.onrender.com/testimonials/6dddd0e0-6b0a-491c-ac84-bb05cb039c82",
+              "protocol": "https",
+              "host": [
+                "s03-26-equipo-14-web-app-development",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "testimonials",
+                "6dddd0e0-6b0a-491c-ac84-bb05cb039c82"
+              ],
+              "query": [
+                {
+                  "key": "projectId",
+                  "value": "6dddd0e0-6b0a-491c-ac84-bb05cb039c82",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Exito - Listar todos los Testimonios",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://s03-26-equipo-14-web-app-development.onrender.com/testimonials/6dddd0e0-6b0a-491c-ac84-bb05cb039c82",
+                  "protocol": "https",
+                  "host": [
+                    "s03-26-equipo-14-web-app-development",
+                    "onrender",
+                    "com"
+                  ],
+                  "path": [
+                    "testimonials",
+                    "6dddd0e0-6b0a-491c-ac84-bb05cb039c82"
+                  ],
+                  "query": [
+                    {
+                      "key": "projectId",
+                      "value": "6dddd0e0-6b0a-491c-ac84-bb05cb039c82",
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "date",
+                  "value": "Sat, 11 Apr 2026 22:51:51 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "1840"
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "content-encoding",
+                  "value": "br"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"2053-WAI4WfBY6x1DrtL/bsFTigt5JBE\""
+                },
+                {
+                  "key": "rndr-id",
+                  "value": "52786618-df44-46f4"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Accept-Encoding"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-render-origin-server",
+                  "value": "Render"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "cf-ray",
+                  "value": "9ead8eec68f0d22c-EZE"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=86400"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"ok\",\n    \"data\": [\n        {\n            \"id\": \"fc10c12e-3da4-4916-b728-6b32dff91ea5\",\n            \"type\": \"case\",\n            \"title\": \"Impacto de la simulación en QA\",\n            \"content\": \"Excelente experiencia validando flujos complejos con el equipo de desarrollo.\",\n            \"author\": \"Mariana Rodriguez\",\n            \"author_photo\": \"\",\n            \"author_role\": \"Coordinadora Académica\",\n            \"media_url\": \"\",\n            \"media_description\": \"Captura de pantalla del dashboard\",\n            \"status\": \"pending\",\n            \"rating\": null,\n            \"slug\": \"impacto-simulacion-qa-final\",\n            \"rejectedReason\": null,\n            \"created_at\": \"2026-04-11T17:12:10.513Z\",\n            \"updated_at\": \"2026-04-11T17:12:10.513Z\",\n            \"published_at\": null,\n            \"category_id\": \"a25fd169-5fea-4e4d-93ec-85174d718f84\",\n            \"member_id\": \"4f815158-50cb-43ad-aec0-a38354cb70e0\",\n            \"project_id\": \"6dddd0e0-6b0a-491c-ac84-bb05cb039c82\"\n        },\n        {\n            \"id\": \"a054f56c-a9f4-4c97-bb7a-ad44cae8f7a4\",\n            \"type\": \"quote\",\n            \"title\": null,\n            \"content\": \"Validación final con el formato sugerido por el equipo de desarrollo.\",\n            \"author\": \"Zulay Peraza\",\n            \"author_photo\": \"\",\n            \"author_role\": \"QA Tester\",\n            \"media_url\": \"\",\n            \"media_description\": null,\n            \"status\": \"published\",\n            \"rating\": \"5\",\n            \"slug\": null,\n            \"rejectedReason\": null,\n            \"created_at\": \"2026-04-11T16:54:11.748Z\",\n            \"updated_at\": \"2026-04-11T18:23:54.228Z\",\n            \"published_at\": null,\n            \"category_id\": null,\n            \"member_id\": null,\n            \"project_id\": \"6dddd0e0-6b0a-491c-ac84-bb05cb039c82\"\n        },\n        {\n            \"id\": \"28b27763-28fd-4fbf-a9fe-a6192955afe9\",\n            \"type\": \"quote\",\n            \"title\": null,\n            \"content\": \"ejemplo de comentario\",\n            \"author\": \"Ana\",\n            \"author_photo\": \"\",\n            \"author_role\": \"Estudiante\",\n            \"media_url\": \"\",\n            \"media_description\": null,\n            \"status\": \"published\",\n            \"rating\": \"4\",\n            \"slug\": null,\n            \"rejectedReason\": null,\n            \"created_at\": \"2026-04-11T16:30:41.900Z\",\n            \"updated_at\": \"2026-04-11T18:23:21.681Z\",\n            \"published_at\": null,\n            \"category_id\": null,\n            \"member_id\": null,\n            \"project_id\": \"6dddd0e0-6b0a-491c-ac84-bb05cb039c82\"\n        },\n        {\n            \"id\": \"7d63f2e6-6691-4b5c-b515-00d53ec2b2f6\",\n            \"type\": \"quote\",\n            \"title\": null,\n            \"content\": \"comentario de eejemplo\",\n            \"author\": \"Ana Garcia\",\n            \"author_photo\": \"\",\n            \"author_role\": \"Estudiante\",\n            \"media_url\": \"\",\n            \"media_description\": null,\n            \"status\": \"review\",\n            \"rating\": \"4\",\n            \"slug\": null,\n            \"rejectedReason\": null,\n            \"created_at\": \"2026-04-11T16:22:53.125Z\",\n            \"updated_at\": \"2026-04-11T18:14:31.205Z\",\n            \"published_at\": null,\n            \"category_id\": null,\n            \"member_id\": null,\n            \"project_id\": \"6dddd0e0-6b0a-491c-ac84-bb05cb039c82\"\n        },\n        {\n            \"id\": \"d68c8a56-7653-4595-8ecc-37d75f19f752\",\n            \"type\": \"case\",\n            \"title\": \"titulo de ejempli\",\n            \"content\": \"descripción de ejemplo\",\n            \"author\": \"Mariana Rodriguez\",\n            \"author_photo\": \"\",\n            \"author_role\": \"Coordinadora Académica en Universidad del Sur\",\n            \"media_url\": \"\",\n            \"media_description\": \"\",\n            \"status\": \"pending\",\n            \"rating\": null,\n            \"slug\": \"titulo-de-ejempli\",\n            \"rejectedReason\": null,\n            \"created_at\": \"2026-04-11T16:00:48.007Z\",\n            \"updated_at\": \"2026-04-11T16:00:48.007Z\",\n            \"published_at\": null,\n            \"category_id\": \"a25fd169-5fea-4e4d-93ec-85174d718f84\",\n            \"member_id\": \"4f815158-50cb-43ad-aec0-a38354cb70e0\",\n            \"project_id\": \"6dddd0e0-6b0a-491c-ac84-bb05cb039c82\"\n        },\n        {\n            \"id\": \"ba65a556-5266-4685-bdf4-478bf15c5698\",\n            \"type\": \"case\",\n            \"title\": \"fdfd\",\n            \"content\": \"fdfd\",\n            \"author\": \"nombre\",\n            \"author_photo\": \"\",\n            \"author_role\": \"cargo\",\n            \"media_url\": \"\",\n            \"media_description\": \"\",\n            \"status\": \"pending\",\n            \"rating\": null,\n            \"slug\": \"fdfd\",\n            \"rejectedReason\": null,\n            \"created_at\": \"2026-04-11T15:35:59.120Z\",\n            \"updated_at\": \"2026-04-11T15:35:59.120Z\",\n            \"published_at\": null,\n            \"category_id\": \"63e8863e-d878-437a-873b-626531ae228c\",\n            \"member_id\": \"4f815158-50cb-43ad-aec0-a38354cb70e0\",\n            \"project_id\": \"6dddd0e0-6b0a-491c-ac84-bb05cb039c82\"\n        },\n        {\n            \"id\": \"5db5e0a9-c6b6-47ff-a2b9-75d937b09663\",\n            \"type\": \"case\",\n            \"title\": \"ddddddddd\",\n            \"content\": \"sssssssssssssss\",\n            \"author\": \"asdasd\",\n            \"author_photo\": \"https://res.cloudinary.com/dhc06g3ei/image/upload/v1775838794/6dddd0e0-6b0a-491c-ac84-bb05cb039c82/1775838792573/avatar/knmll6rzg2yetxn82ffl.jpg\",\n            \"author_role\": \"wwwww\",\n            \"media_url\": \"https://res.cloudinary.com/dhc06g3ei/image/upload/v1775838795/6dddd0e0-6b0a-491c-ac84-bb05cb039c82/1775838792573/cover/mk0hpke8hymegpglt7wg.jpg\",\n            \"media_description\": \"\",\n            \"status\": \"rejected\",\n            \"rating\": null,\n            \"slug\": \"ddddddddd\",\n            \"rejectedReason\": \"no\",\n            \"created_at\": \"2026-04-10T16:33:16.857Z\",\n            \"updated_at\": \"2026-04-10T22:38:35.194Z\",\n            \"published_at\": null,\n            \"category_id\": \"86b08b10-5759-453b-bbe1-93e0dfb9b7b8\",\n            \"member_id\": \"4f815158-50cb-43ad-aec0-a38354cb70e0\",\n            \"project_id\": \"6dddd0e0-6b0a-491c-ac84-bb05cb039c82\"\n        },\n        {\n            \"id\": \"ce66ebdb-3772-40ee-be79-85435cf51328\",\n            \"type\": \"case\",\n            \"title\": \"titulo\",\n            \"content\": \"descripcion\",\n            \"author\": \"nombre\",\n            \"author_photo\": \"\",\n            \"author_role\": \"cargo\",\n            \"media_url\": \"\",\n            \"media_description\": \"\",\n            \"status\": \"published\",\n            \"rating\": null,\n            \"slug\": \"titulo\",\n            \"rejectedReason\": null,\n            \"created_at\": \"2026-04-09T21:43:59.122Z\",\n            \"updated_at\": \"2026-04-11T17:33:33.304Z\",\n            \"published_at\": null,\n            \"category_id\": \"86b08b10-5759-453b-bbe1-93e0dfb9b7b8\",\n            \"member_id\": \"4f815158-50cb-43ad-aec0-a38354cb70e0\",\n            \"project_id\": \"6dddd0e0-6b0a-491c-ac84-bb05cb039c82\"\n        },\n        {\n            \"id\": \"89917cb3-32cc-44a2-96c3-9d5c7e8b66c4\",\n            \"type\": \"case\",\n            \"title\": \"sssssssssssssss\",\n            \"content\": \"asasas\",\n            \"author\": \"asdasd\",\n            \"author_photo\": \"https://res.cloudinary.com/dhc06g3ei/image/upload/v1775766979/6dddd0e0-6b0a-491c-ac84-bb05cb039c82/1775766977900/avatar/x0lbxqzz746t4ls8mai4.jpg\",\n            \"author_role\": \"ssss\",\n            \"media_url\": \"https://res.cloudinary.com/dhc06g3ei/image/upload/v1775766980/6dddd0e0-6b0a-491c-ac84-bb05cb039c82/1775766977900/cover/e76gfwzrj0gdkpppf7tn.jpg\",\n            \"media_description\": \"\",\n            \"status\": \"pending\",\n            \"rating\": null,\n            \"slug\": \"dadad\",\n            \"rejectedReason\": null,\n            \"created_at\": \"2026-04-09T20:36:21.940Z\",\n            \"updated_at\": \"2026-04-10T01:11:42.955Z\",\n            \"published_at\": null,\n            \"category_id\": \"a25fd169-5fea-4e4d-93ec-85174d718f84\",\n            \"member_id\": \"4f815158-50cb-43ad-aec0-a38354cb70e0\",\n            \"project_id\": \"6dddd0e0-6b0a-491c-ac84-bb05cb039c82\"\n        },\n        {\n            \"id\": \"4e1cb26e-5a4b-4b67-89a9-e2409ad06e5a\",\n            \"type\": \"case\",\n            \"title\": \"qwqwddddd\",\n            \"content\": \"asasaddddddddddddddd\",\n            \"author\": \"adaaaaaaaaa\",\n            \"author_photo\": \"\",\n            \"author_role\": \"da\",\n            \"media_url\": \"\",\n            \"media_description\": \"\",\n            \"status\": \"draft\",\n            \"rating\": null,\n            \"slug\": \"qwqwddddd\",\n            \"rejectedReason\": null,\n            \"created_at\": \"2026-04-09T20:20:20.357Z\",\n            \"updated_at\": \"2026-04-10T01:27:27.307Z\",\n            \"published_at\": null,\n            \"category_id\": \"34559559-1d26-4657-8ae8-268256dff325\",\n            \"member_id\": \"4f815158-50cb-43ad-aec0-a38354cb70e0\",\n            \"project_id\": \"6dddd0e0-6b0a-491c-ac84-bb05cb039c82\"\n        },\n        {\n            \"id\": \"8dfd8319-7046-4057-9dd3-91cea42ec028\",\n            \"type\": \"case\",\n            \"title\": \"kkkkkkkkkkkkk\",\n            \"content\": \"llllllllllllllllllllll\",\n            \"author\": \"asdasd\",\n            \"author_photo\": \"\",\n            \"author_role\": \"ssss\",\n            \"media_url\": \"\",\n            \"media_description\": \"\",\n            \"status\": \"published\",\n            \"rating\": null,\n            \"slug\": \"kkkkkkkkkkkkk\",\n            \"rejectedReason\": null,\n            \"created_at\": \"2026-04-09T01:24:32.056Z\",\n            \"updated_at\": \"2026-04-09T23:37:08.047Z\",\n            \"published_at\": null,\n            \"category_id\": \"a25fd169-5fea-4e4d-93ec-85174d718f84\",\n            \"member_id\": \"4f815158-50cb-43ad-aec0-a38354cb70e0\",\n            \"project_id\": \"6dddd0e0-6b0a-491c-ac84-bb05cb039c82\"\n        },\n        {\n            \"id\": \"512e5dd0-ada0-4a55-a2ca-dd9aeca94327\",\n            \"type\": \"video\",\n            \"title\": \"dddddddddddddddddddddddddddddddddddddddddddd\",\n            \"content\": \"dddddddddddddddddddddddddddddddddddddddddddd\",\n            \"author\": \"asdasd\",\n            \"author_photo\": \"https://res.cloudinary.com/dhc06g3ei/image/upload/v1775694948/6dddd0e0-6b0a-491c-ac84-bb05cb039c82/1775694947873/avatar/bojzmjhbkt6bcpyrea2u.jpg\",\n            \"author_role\": \"aaaaaaaaaaaaa\",\n            \"media_url\": \"https://www.youtube.com/watch?v=T3DAiH_MExA\",\n            \"media_description\": \"dddddddddddddddddddddddddddddddddddddddddddd\",\n            \"status\": \"published\",\n            \"rating\": null,\n            \"slug\": \"dddddddddddddddddddddddddddddddddddddddddddd\",\n            \"rejectedReason\": \"rechazado\",\n            \"created_at\": \"2026-04-09T00:36:08.315Z\",\n            \"updated_at\": \"2026-04-10T16:50:48.222Z\",\n            \"published_at\": null,\n            \"category_id\": \"a25fd169-5fea-4e4d-93ec-85174d718f84\",\n            \"member_id\": \"4f815158-50cb-43ad-aec0-a38354cb70e0\",\n            \"project_id\": \"6dddd0e0-6b0a-491c-ac84-bb05cb039c82\"\n        },\n        {\n            \"id\": \"db5f7b77-b331-42b3-b136-fb4299bbb6c8\",\n            \"type\": \"case\",\n            \"title\": \"ddddddd\",\n            \"content\": \"fffffffffffffffffff\",\n            \"author\": \"asdasd\",\n            \"author_photo\": \"https://res.cloudinary.com/dhc06g3ei/image/upload/v1775694648/6dddd0e0-6b0a-491c-ac84-bb05cb039c82/1775694646878/avatar/gxxggephtitcxnglwrrt.jpg\",\n            \"author_role\": \"ssss\",\n            \"media_url\": \"https://res.cloudinary.com/dhc06g3ei/image/upload/v1775694648/6dddd0e0-6b0a-491c-ac84-bb05cb039c82/1775694646878/cover/g6pgwxwhspxvtssuv72k.jpg\",\n            \"media_description\": \"\",\n            \"status\": \"rejected\",\n            \"rating\": null,\n            \"slug\": \"ddddddd\",\n            \"rejectedReason\": \"aaaffffff\",\n            \"created_at\": \"2026-04-09T00:30:50.794Z\",\n            \"updated_at\": \"2026-04-10T00:51:58.053Z\",\n            \"published_at\": null,\n            \"category_id\": \"a25fd169-5fea-4e4d-93ec-85174d718f84\",\n            \"member_id\": \"4f815158-50cb-43ad-aec0-a38354cb70e0\",\n            \"project_id\": \"6dddd0e0-6b0a-491c-ac84-bb05cb039c82\"\n        }\n    ]\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "HU-2.2: Edicion de testimonio externo (Visitor)",
+      "item": [
+        {
+          "name": "CP-012: Error - Validación de Formato en Content",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "\r\n{\r\n    \"type\": \"quote\",\r\n    \"projectId\": \"6dddd0e0-6b0a-491c-ac84-bb05cb039c82\",\r\n    \"author\": \"Prueba de Error\",\r\n    \"authorRole\": \"QA Tester\",\r\n    \"rating\": 5\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://s03-26-equipo-14-web-app-development.onrender.com/testimonials/quote",
+              "protocol": "https",
+              "host": [
+                "s03-26-equipo-14-web-app-development",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "testimonials",
+                "quote"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Resultado - Validación de campo String",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "\r\n{\r\n    \"type\": \"quote\",\r\n    \"projectId\": \"6dddd0e0-6b0a-491c-ac84-bb05cb039c82\",\r\n    \"author\": \"Prueba de Error\",\r\n    \"authorRole\": \"QA Tester\",\r\n    \"rating\": 5\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://s03-26-equipo-14-web-app-development.onrender.com/testimonials/quote",
+                  "protocol": "https",
+                  "host": [
+                    "s03-26-equipo-14-web-app-development",
+                    "onrender",
+                    "com"
+                  ],
+                  "path": [
+                    "testimonials",
+                    "quote"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 400
+                },
+                {
+                  "key": "date",
+                  "value": "Sat, 11 Apr 2026 20:37:01 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "77"
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "content-encoding",
+                  "value": "br"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"4f-JeosnzYSS4di/3R1CZ9l58bJ9D0\""
+                },
+                {
+                  "key": "rndr-id",
+                  "value": "1e87656a-5196-413d"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Accept-Encoding"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-render-origin-server",
+                  "value": "Render"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "cf-ray",
+                  "value": "9eacc96c1a6526be-EZE"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=86400"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": [\n        \"content must be a string\"\n    ],\n    \"error\": \"Bad Request\",\n    \"statusCode\": 400\n}"
+            }
+          ]
+        },
+        {
+          "name": "CP-013 - Validar Edición de Testimonio",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiMGYyMWNlNS01NDIyLTQyOTgtYjExMC1lYzkwNzZlY2Y1NjIiLCJlbWFpbCI6InVzZXJAZXhhbXBsZS5jb20iLCJvcmdhbml6YXRpb25JZCI6IjQ1NTI5OGQ5LTExMDItNDdhYy04ZWMwLWYzMGJlN2E4ZTI1YiIsInJvbGUiOiJPd25lciIsImlhdCI6MTc3NjE3NzkwOCwiZXhwIjoxNzc2MjY0MzA4fQ.Bk0r38Bvn6QVBj6WTDkw_oSq7thBVId45jzATDYFqvc",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "\r\n{\r\n  \"title\": \"\",\r\n  \"content\": \"\",\r\n  \"author\": \"\",\r\n  \"author_role\": \"\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://s03-26-equipo-14-web-app-development.onrender.com/testimonials/a25fd169-5fea-4e4d-93ec-85174d718f84",
+              "protocol": "https",
+              "host": [
+                "s03-26-equipo-14-web-app-development",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "testimonials",
+                "a25fd169-5fea-4e4d-93ec-85174d718f84"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Resultado - Validación de tipos de datos (String).",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "\r\n{\r\n  \"content\": \"\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://s03-26-equipo-14-web-app-development.onrender.com/testimonials/d68c8a56-7653-4595-8ecc-37d75f19f752",
+                  "protocol": "https",
+                  "host": [
+                    "s03-26-equipo-14-web-app-development",
+                    "onrender",
+                    "com"
+                  ],
+                  "path": [
+                    "testimonials",
+                    "d68c8a56-7653-4595-8ecc-37d75f19f752"
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 401
+                },
+                {
+                  "key": "date",
+                  "value": "Sat, 11 Apr 2026 21:21:46 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "47"
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "content-encoding",
+                  "value": "br"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"2b-dGnJzt6gv1nJjX6DJ9RztDWptng\""
+                },
+                {
+                  "key": "rndr-id",
+                  "value": "a6bf258e-b96c-4335"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, Accept-Encoding"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-render-origin-server",
+                  "value": "Render"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "cf-ray",
+                  "value": "9ead0af8beecc0ff-EZE"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=86400"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Unauthorized\",\n    \"statusCode\": 401\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "HU-2.3: Visualización y Lista de Testimonio",
+      "item": [
+        {
+          "name": "CP-014: Verificación de Endpoint Público por ID.",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://cms-14-dev.vercel.app/api/testimonials/public/getById/a25fd169-5fea-4e4d-93ec-85174d718f84",
+              "protocol": "https",
+              "host": [
+                "cms-14-dev",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "testimonials",
+                "public",
+                "getById",
+                "a25fd169-5fea-4e4d-93ec-85174d718f84"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Error - Verificación de Endpoint Público por ID.",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://cms-14-dev.vercel.app/api/testimonials/public/getById/a25fd169-5fea-4e4d-93ec-85174d718f84",
+                  "protocol": "https",
+                  "host": [
+                    "cms-14-dev",
+                    "vercel",
+                    "app"
+                  ],
+                  "path": [
+                    "api",
+                    "testimonials",
+                    "public",
+                    "getById",
+                    "a25fd169-5fea-4e4d-93ec-85174d718f84"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 404
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "age",
+                  "value": "398"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "content-disposition",
+                  "value": "inline; filename=\"404\""
+                },
+                {
+                  "key": "content-encoding",
+                  "value": "br"
+                },
+                {
+                  "key": "content-type",
+                  "value": "text/html; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 14 Apr 2026 11:49:28 GMT"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"a296214fee69014bcda486d32a24c365\""
+                },
+                {
+                  "key": "last-modified",
+                  "value": "Tue, 14 Apr 2026 11:42:50 GMT"
+                },
+                {
+                  "key": "server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "x-matched-path",
+                  "value": "/404"
+                },
+                {
+                  "key": "x-vercel-cache",
+                  "value": "HIT"
+                },
+                {
+                  "key": "x-vercel-id",
+                  "value": "gru1::qtlfk-1776167368825-b677bc71b4bf"
+                }
+              ],
+              "cookie": [],
+              "body": "<!DOCTYPE html>\n<html lang=\"en\" class=\"font-sans geist_da832ead-module__aN_Ytq__variable\">\n    <head>\n        <meta charSet=\"utf-8\"/>\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/>\n        <link rel=\"stylesheet\" href=\"/_next/static/chunks/0ogjxvf9rb1lb.css\" data-precedence=\"next\"/>\n        <link rel=\"stylesheet\" href=\"/_next/static/chunks/17x6kx5_vrip~.css\" data-precedence=\"next\"/>\n        <link rel=\"preload\" as=\"script\" fetchPriority=\"low\" href=\"/_next/static/chunks/0fv5eokpqn4gi.js\"/>\n        <script src=\"/_next/static/chunks/0dlgf_hiueci7.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/0d_-.jo~kcrs2.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/0ygjz712eu3pm.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/0t.wn-sl8bvsv.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/turbopack-0ukkeek9v_o3a.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/0f.nu7yupdhlo.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/10-y2xkhi3uzl.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/0vl35cp_n4rkq.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/0jj~8w1nr9syu.js\" async=\"\"></script>\n        <script src=\"/_next/static/chunks/0zz_57lo8.vdg.js\" async=\"\"></script>\n        <meta name=\"robots\" content=\"noindex\"/>\n        <meta name=\"next-size-adjust\" content=\"\"/>\n        <title>Create Next App</title>\n        <meta name=\"description\" content=\"Generated by create next app\"/>\n        <link rel=\"icon\" href=\"/favicon.ico?favicon.0x3dzn~oxb6tn.ico\" sizes=\"256x256\" type=\"image/x-icon\"/>\n        <script src=\"/_next/static/chunks/03~yq9q893hmn.js\" noModule=\"\"></script>\n    </head>\n    <body class=\"geistsans_d025f23b-module__ta2ZYW__variable geistmono_df95d851-module__DSRnBq__variable\">\n        <div hidden=\"\">\n            <!--$-->\n            <!--/$-->\n        </div>\n        <div class=\"min-h-screen bg-gray-100 flex flex-col items-center justify-center px-4\">\n            <div class=\"flex flex-col items-center gap-4 text-center\">\n                <div class=\"flex items-center justify-center w-16 h-16 rounded-full border-2 border-indigo-300 text-indigo-300\">\n                    <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"w-8 h-8\">\n                        <circle cx=\"12\" cy=\"12\" r=\"10\"></circle>\n                        <line x1=\"12\" y1=\"8\" x2=\"12\" y2=\"12\"></line>\n                        <line x1=\"12\" y1=\"16\" x2=\"12.01\" y2=\"16\"></line>\n                    </svg>\n                </div>\n                <h1 class=\"text-8xl font-bold text-gray-700 leading-none\">404</h1>\n                <h2 class=\"text-2xl font-bold text-gray-700\">Página no encontrada</h2>\n                <p class=\"text-gray-500 max-w-sm\">Lo sentimos, la página que estás buscando no existe o ha sido movida.</p>\n                <a class=\"mt-2 inline-flex items-center gap-2 bg-indigo-500 hover:bg-indigo-600 text-white font-medium px-6 py-3 rounded-md transition-colors\" href=\"/dashboard\">Volver al Dashboard\n                    <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"w-4 h-4\">\n                        <rect x=\"3\" y=\"3\" width=\"7\" height=\"7\"></rect>\n                        <rect x=\"14\" y=\"3\" width=\"7\" height=\"7\"></rect>\n                        <rect x=\"3\" y=\"14\" width=\"7\" height=\"7\"></rect>\n                        <rect x=\"14\" y=\"14\" width=\"7\" height=\"7\"></rect>\n                    </svg>\n                </a>\n            </div>\n            <footer class=\"absolute bottom-6 text-xs text-gray-400 tracking-widest uppercase\">EdTech CMS • Gestión de Testimonios • 2024</footer>\n        </div>\n        <!--$-->\n        <!--/$-->\n        <section aria-label=\"Notifications alt+T\" tabindex=\"-1\" aria-live=\"polite\" aria-relevant=\"additions text\" aria-atomic=\"false\"></section>\n        <script src=\"/_next/static/chunks/0fv5eokpqn4gi.js\" id=\"_R_\" async=\"\"></script>\n        <script>(self.__next_f=self.__next_f||[]).push([0])</script>\n        <script>self.__next_f.push([1,\"1:\\\"$Sreact.fragment\\\"\\n2:I[22561,[\\\"/_next/static/chunks/0f.nu7yupdhlo.js\\\",\\\"/_next/static/chunks/10-y2xkhi3uzl.js\\\",\\\"/_next/static/chunks/0vl35cp_n4rkq.js\\\",\\\"/_next/static/chunks/0jj~8w1nr9syu.js\\\"],\\\"Providers\\\"]\\n3:I[90986,[\\\"/_next/static/chunks/0f.nu7yupdhlo.js\\\",\\\"/_next/static/chunks/10-y2xkhi3uzl.js\\\",\\\"/_next/static/chunks/0vl35cp_n4rkq.js\\\",\\\"/_next/static/chunks/0jj~8w1nr9syu.js\\\"],\\\"default\\\"]\\n4:I[18169,[\\\"/_next/static/chunks/0f.nu7yupdhlo.js\\\",\\\"/_next/static/chunks/10-y2xkhi3uzl.js\\\",\\\"/_next/static/chunks/0vl35cp_n4rkq.js\\\",\\\"/_next/static/chunks/0jj~8w1nr9syu.js\\\"],\\\"default\\\"]\\n5:I[48349,[\\\"/_next/static/chunks/0f.nu7yupdhlo.js\\\",\\\"/_next/static/chunks/10-y2xkhi3uzl.js\\\",\\\"/_next/static/chunks/0vl35cp_n4rkq.js\\\",\\\"/_next/static/chunks/0jj~8w1nr9syu.js\\\",\\\"/_next/static/chunks/0zz_57lo8.vdg.js\\\"],\\\"\\\"]\\nc:I[28680,[\\\"/_next/static/chunks/0f.nu7yupdhlo.js\\\",\\\"/_next/static/chunks/10-y2xkhi3uzl.js\\\",\\\"/_next/static/chunks/0vl35cp_n4rkq.js\\\",\\\"/_next/static/chunks/0jj~8w1nr9syu.js\\\"],\\\"default\\\",1]\\n:HL[\\\"/_next/static/chunks/0ogjxvf9rb1lb.css\\\",\\\"style\\\"]\\n:HL[\\\"/_next/static/chunks/17x6kx5_vrip~.css\\\",\\\"style\\\"]\\n\"])</script>\n        <script>self.__next_f.push([1,\"0:{\\\"P\\\":null,\\\"c\\\":[\\\"\\\",\\\"_not-found\\\"],\\\"q\\\":\\\"\\\",\\\"i\\\":false,\\\"f\\\":[[[\\\"\\\",{\\\"children\\\":[\\\"/_not-found\\\",{\\\"children\\\":[\\\"__PAGE__\\\",{}]}]},\\\"$undefined\\\",\\\"$undefined\\\",16],[[\\\"$\\\",\\\"$1\\\",\\\"c\\\",{\\\"children\\\":[[[\\\"$\\\",\\\"link\\\",\\\"0\\\",{\\\"rel\\\":\\\"stylesheet\\\",\\\"href\\\":\\\"/_next/static/chunks/0ogjxvf9rb1lb.css\\\",\\\"precedence\\\":\\\"next\\\",\\\"crossOrigin\\\":\\\"$undefined\\\",\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"link\\\",\\\"1\\\",{\\\"rel\\\":\\\"stylesheet\\\",\\\"href\\\":\\\"/_next/static/chunks/17x6kx5_vrip~.css\\\",\\\"precedence\\\":\\\"next\\\",\\\"crossOrigin\\\":\\\"$undefined\\\",\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/0f.nu7yupdhlo.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-1\\\",{\\\"src\\\":\\\"/_next/static/chunks/10-y2xkhi3uzl.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-2\\\",{\\\"src\\\":\\\"/_next/static/chunks/0vl35cp_n4rkq.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"script\\\",\\\"script-3\\\",{\\\"src\\\":\\\"/_next/static/chunks/0jj~8w1nr9syu.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}]],[\\\"$\\\",\\\"html\\\",null,{\\\"lang\\\":\\\"en\\\",\\\"className\\\":\\\"font-sans geist_da832ead-module__aN_Ytq__variable\\\",\\\"children\\\":[\\\"$\\\",\\\"body\\\",null,{\\\"className\\\":\\\"geistsans_d025f23b-module__ta2ZYW__variable geistmono_df95d851-module__DSRnBq__variable\\\",\\\"children\\\":[\\\"$\\\",\\\"$L2\\\",null,{\\\"children\\\":[\\\"$\\\",\\\"$L3\\\",null,{\\\"parallelRouterKey\\\":\\\"children\\\",\\\"error\\\":\\\"$undefined\\\",\\\"errorStyles\\\":\\\"$undefined\\\",\\\"errorScripts\\\":\\\"$undefined\\\",\\\"template\\\":[\\\"$\\\",\\\"$L4\\\",null,{}],\\\"templateStyles\\\":\\\"$undefined\\\",\\\"templateScripts\\\":\\\"$undefined\\\",\\\"notFound\\\":[[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"min-h-screen bg-gray-100 flex flex-col items-center justify-center px-4\\\",\\\"children\\\":[[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"flex flex-col items-center gap-4 text-center\\\",\\\"children\\\":[[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"flex items-center justify-center w-16 h-16 rounded-full border-2 border-indigo-300 text-indigo-300\\\",\\\"children\\\":[\\\"$\\\",\\\"svg\\\",null,{\\\"xmlns\\\":\\\"http://www.w3.org/2000/svg\\\",\\\"viewBox\\\":\\\"0 0 24 24\\\",\\\"fill\\\":\\\"none\\\",\\\"stroke\\\":\\\"currentColor\\\",\\\"strokeWidth\\\":\\\"2\\\",\\\"strokeLinecap\\\":\\\"round\\\",\\\"strokeLinejoin\\\":\\\"round\\\",\\\"className\\\":\\\"w-8 h-8\\\",\\\"children\\\":[[\\\"$\\\",\\\"circle\\\",null,{\\\"cx\\\":\\\"12\\\",\\\"cy\\\":\\\"12\\\",\\\"r\\\":\\\"10\\\"}],[\\\"$\\\",\\\"line\\\",null,{\\\"x1\\\":\\\"12\\\",\\\"y1\\\":\\\"8\\\",\\\"x2\\\":\\\"12\\\",\\\"y2\\\":\\\"12\\\"}],[\\\"$\\\",\\\"line\\\",null,{\\\"x1\\\":\\\"12\\\",\\\"y1\\\":\\\"16\\\",\\\"x2\\\":\\\"12.01\\\",\\\"y2\\\":\\\"16\\\"}]]}]}],[\\\"$\\\",\\\"h1\\\",null,{\\\"className\\\":\\\"text-8xl font-bold text-gray-700 leading-none\\\",\\\"children\\\":\\\"404\\\"}],[\\\"$\\\",\\\"h2\\\",null,{\\\"className\\\":\\\"text-2xl font-bold text-gray-700\\\",\\\"children\\\":\\\"Página no encontrada\\\"}],[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"text-gray-500 max-w-sm\\\",\\\"children\\\":\\\"Lo sentimos, la página que estás buscando no existe o ha sido movida.\\\"}],[\\\"$\\\",\\\"$L5\\\",null,{\\\"href\\\":\\\"/dashboard\\\",\\\"className\\\":\\\"mt-2 inline-flex items-center gap-2 bg-indigo-500 hover:bg-indigo-600 text-white font-medium px-6 py-3 rounded-md transition-colors\\\",\\\"children\\\":[\\\"Volver al Dashboard\\\",[\\\"$\\\",\\\"svg\\\",null,{\\\"xmlns\\\":\\\"http://www.w3.org/2000/svg\\\",\\\"viewBox\\\":\\\"0 0 24 24\\\",\\\"fill\\\":\\\"none\\\",\\\"stroke\\\":\\\"currentColor\\\",\\\"strokeWidth\\\":\\\"2\\\",\\\"strokeLinecap\\\":\\\"round\\\",\\\"strokeLinejoin\\\":\\\"round\\\",\\\"className\\\":\\\"w-4 h-4\\\",\\\"children\\\":[[\\\"$\\\",\\\"rect\\\",null,{\\\"x\\\":\\\"3\\\",\\\"y\\\":\\\"3\\\",\\\"width\\\":\\\"7\\\",\\\"height\\\":\\\"7\\\"}],[\\\"$\\\",\\\"rect\\\",null,{\\\"x\\\":\\\"14\\\",\\\"y\\\":\\\"3\\\",\\\"width\\\":\\\"7\\\",\\\"height\\\":\\\"7\\\"}],[\\\"$\\\",\\\"rect\\\",null,{\\\"x\\\":\\\"3\\\",\\\"y\\\":\\\"14\\\",\\\"width\\\":\\\"7\\\",\\\"height\\\":\\\"7\\\"}],[\\\"$\\\",\\\"rect\\\",null,{\\\"x\\\":\\\"14\\\",\\\"y\\\":\\\"14\\\",\\\"width\\\":\\\"7\\\",\\\"height\\\":\\\"7\\\"}]]}]]}]]}],[\\\"$\\\",\\\"footer\\\",null,{\\\"className\\\":\\\"absolute bottom-6 text-xs text-gray-400 tracking-widest uppercase\\\",\\\"children\\\":\\\"EdTech CMS • Gestión de Testimonios • 2024\\\"}]]}],[]],\\\"forbidden\\\":\\\"$undefined\\\",\\\"unauthorized\\\":\\\"$undefined\\\"}]}]}]}]]}],{\\\"children\\\":[[\\\"$\\\",\\\"$1\\\",\\\"c\\\",{\\\"children\\\":[null,[\\\"$\\\",\\\"$L3\\\",null,{\\\"parallelRouterKey\\\":\\\"children\\\",\\\"error\\\":\\\"$undefined\\\",\\\"errorStyles\\\":\\\"$undefined\\\",\\\"errorScripts\\\":\\\"$undefined\\\",\\\"template\\\":[\\\"$\\\",\\\"$L4\\\",null,{}],\\\"templateStyles\\\":\\\"$undefined\\\",\\\"templateScripts\\\":\\\"$undefined\\\",\\\"notFound\\\":\\\"$undefined\\\",\\\"forbidden\\\":\\\"$undefined\\\",\\\"unauthorized\\\":\\\"$undefined\\\"}]]}],{\\\"children\\\":[[\\\"$\\\",\\\"$1\\\",\\\"c\\\",{\\\"children\\\":[[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"min-h-screen bg-gray-100 flex flex-col items-center justify-center px-4\\\",\\\"children\\\":[[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"flex flex-col items-center gap-4 text-center\\\",\\\"children\\\":[[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"flex items-center justify-center w-16 h-16 rounded-full border-2 border-indigo-300 text-indigo-300\\\",\\\"children\\\":[\\\"$\\\",\\\"svg\\\",null,{\\\"xmlns\\\":\\\"http://www.w3.org/2000/svg\\\",\\\"viewBox\\\":\\\"0 0 24 24\\\",\\\"fill\\\":\\\"none\\\",\\\"stroke\\\":\\\"currentColor\\\",\\\"strokeWidth\\\":\\\"2\\\",\\\"strokeLinecap\\\":\\\"round\\\",\\\"strokeLinejoin\\\":\\\"round\\\",\\\"className\\\":\\\"w-8 h-8\\\",\\\"children\\\":[[\\\"$\\\",\\\"circle\\\",null,{\\\"cx\\\":\\\"12\\\",\\\"cy\\\":\\\"12\\\",\\\"r\\\":\\\"10\\\"}],[\\\"$\\\",\\\"line\\\",null,{\\\"x1\\\":\\\"12\\\",\\\"y1\\\":\\\"8\\\",\\\"x2\\\":\\\"12\\\",\\\"y2\\\":\\\"12\\\"}],[\\\"$\\\",\\\"line\\\",null,{\\\"x1\\\":\\\"12\\\",\\\"y1\\\":\\\"16\\\",\\\"x2\\\":\\\"12.01\\\",\\\"y2\\\":\\\"16\\\"}]]}]}],[\\\"$\\\",\\\"h1\\\",null,{\\\"className\\\":\\\"text-8xl font-bold text-gray-700 leading-none\\\",\\\"children\\\":\\\"404\\\"}],[\\\"$\\\",\\\"h2\\\",null,{\\\"className\\\":\\\"text-2xl font-bold text-gray-700\\\",\\\"children\\\":\\\"Página no encontrada\\\"}],[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"text-gray-500 max-w-sm\\\",\\\"children\\\":\\\"Lo sentimos, la página que estás buscando no existe o ha sido movida.\\\"}],[\\\"$\\\",\\\"$L5\\\",null,{\\\"href\\\":\\\"/dashboard\\\",\\\"className\\\":\\\"mt-2 inline-flex items-center gap-2 bg-indigo-500 hover:bg-indigo-600 text-white font-medium px-6 py-3 rounded-md transition-colors\\\",\\\"children\\\":[\\\"Volver al Dashboard\\\",\\\"$L6\\\"]}]]}],\\\"$L7\\\"]}],[\\\"$L8\\\"],\\\"$L9\\\"]}],{},null,false,null]},null,false,\\\"$@a\\\"]},null,false,null],\\\"$Lb\\\",false]],\\\"m\\\":\\\"$undefined\\\",\\\"G\\\":[\\\"$c\\\",[\\\"$Ld\\\",\\\"$Le\\\"]],\\\"S\\\":true,\\\"h\\\":null,\\\"s\\\":\\\"$undefined\\\",\\\"l\\\":\\\"$undefined\\\",\\\"p\\\":\\\"$undefined\\\",\\\"d\\\":\\\"$undefined\\\",\\\"b\\\":\\\"g4TvW9zGBvNVhtVdbcSY3\\\"}\\n\"])</script>\n        <script>self.__next_f.push([1,\"f:I[23430,[\\\"/_next/static/chunks/0f.nu7yupdhlo.js\\\",\\\"/_next/static/chunks/10-y2xkhi3uzl.js\\\",\\\"/_next/static/chunks/0vl35cp_n4rkq.js\\\",\\\"/_next/static/chunks/0jj~8w1nr9syu.js\\\"],\\\"OutletBoundary\\\"]\\n10:\\\"$Sreact.suspense\\\"\\n13:I[23430,[\\\"/_next/static/chunks/0f.nu7yupdhlo.js\\\",\\\"/_next/static/chunks/10-y2xkhi3uzl.js\\\",\\\"/_next/static/chunks/0vl35cp_n4rkq.js\\\",\\\"/_next/static/chunks/0jj~8w1nr9syu.js\\\"],\\\"ViewportBoundary\\\"]\\n15:I[23430,[\\\"/_next/static/chunks/0f.nu7yupdhlo.js\\\",\\\"/_next/static/chunks/10-y2xkhi3uzl.js\\\",\\\"/_next/static/chunks/0vl35cp_n4rkq.js\\\",\\\"/_next/static/chunks/0jj~8w1nr9syu.js\\\"],\\\"MetadataBoundary\\\"]\\n6:[\\\"$\\\",\\\"svg\\\",null,{\\\"xmlns\\\":\\\"http://www.w3.org/2000/svg\\\",\\\"viewBox\\\":\\\"0 0 24 24\\\",\\\"fill\\\":\\\"none\\\",\\\"stroke\\\":\\\"currentColor\\\",\\\"strokeWidth\\\":\\\"2\\\",\\\"strokeLinecap\\\":\\\"round\\\",\\\"strokeLinejoin\\\":\\\"round\\\",\\\"className\\\":\\\"w-4 h-4\\\",\\\"children\\\":[[\\\"$\\\",\\\"rect\\\",null,{\\\"x\\\":\\\"3\\\",\\\"y\\\":\\\"3\\\",\\\"width\\\":\\\"7\\\",\\\"height\\\":\\\"7\\\"}],[\\\"$\\\",\\\"rect\\\",null,{\\\"x\\\":\\\"14\\\",\\\"y\\\":\\\"3\\\",\\\"width\\\":\\\"7\\\",\\\"height\\\":\\\"7\\\"}],[\\\"$\\\",\\\"rect\\\",null,{\\\"x\\\":\\\"3\\\",\\\"y\\\":\\\"14\\\",\\\"width\\\":\\\"7\\\",\\\"height\\\":\\\"7\\\"}],[\\\"$\\\",\\\"rect\\\",null,{\\\"x\\\":\\\"14\\\",\\\"y\\\":\\\"14\\\",\\\"width\\\":\\\"7\\\",\\\"height\\\":\\\"7\\\"}]]}]\\n7:[\\\"$\\\",\\\"footer\\\",null,{\\\"className\\\":\\\"absolute bottom-6 text-xs text-gray-400 tracking-widest uppercase\\\",\\\"children\\\":\\\"EdTech CMS • Gestión de Testimonios • 2024\\\"}]\\n8:[\\\"$\\\",\\\"script\\\",\\\"script-0\\\",{\\\"src\\\":\\\"/_next/static/chunks/0zz_57lo8.vdg.js\\\",\\\"async\\\":true,\\\"nonce\\\":\\\"$undefined\\\"}]\\n9:[\\\"$\\\",\\\"$Lf\\\",null,{\\\"children\\\":[\\\"$\\\",\\\"$10\\\",null,{\\\"name\\\":\\\"Next.MetadataOutlet\\\",\\\"children\\\":\\\"$@11\\\"}]}]\\n12:[]\\na:\\\"$W12\\\"\\nb:[\\\"$\\\",\\\"$1\\\",\\\"h\\\",{\\\"children\\\":[[\\\"$\\\",\\\"meta\\\",null,{\\\"name\\\":\\\"robots\\\",\\\"content\\\":\\\"noindex\\\"}],[\\\"$\\\",\\\"$L13\\\",null,{\\\"children\\\":\\\"$L14\\\"}],[\\\"$\\\",\\\"div\\\",null,{\\\"hidden\\\":true,\\\"children\\\":[\\\"$\\\",\\\"$L15\\\",null,{\\\"children\\\":[\\\"$\\\",\\\"$10\\\",null,{\\\"name\\\":\\\"Next.Metadata\\\",\\\"children\\\":\\\"$L16\\\"}]}]}],[\\\"$\\\",\\\"meta\\\",null,{\\\"name\\\":\\\"next-size-adjust\\\",\\\"content\\\":\\\"\\\"}]]}]\\nd:[\\\"$\\\",\\\"link\\\",\\\"0\\\",{\\\"rel\\\":\\\"stylesheet\\\",\\\"href\\\":\\\"/_next/static/chunks/0ogjxvf9rb1lb.css\\\",\\\"precedence\\\":\\\"next\\\",\\\"crossOrigin\\\":\\\"$undefined\\\",\\\"nonce\\\":\\\"$undefined\\\"}]\\ne:[\\\"$\\\",\\\"link\\\",\\\"1\\\",{\\\"rel\\\":\\\"stylesheet\\\",\\\"href\\\":\\\"/_next/static/chunks/17x6kx5_vrip~.css\\\",\\\"precedence\\\":\\\"next\\\",\\\"crossOrigin\\\":\\\"$undefined\\\",\\\"nonce\\\":\\\"$undefined\\\"}]\\n\"])</script>\n        <script>self.__next_f.push([1,\"14:[[\\\"$\\\",\\\"meta\\\",\\\"0\\\",{\\\"charSet\\\":\\\"utf-8\\\"}],[\\\"$\\\",\\\"meta\\\",\\\"1\\\",{\\\"name\\\":\\\"viewport\\\",\\\"content\\\":\\\"width=device-width, initial-scale=1\\\"}]]\\n\"])</script>\n        <script>self.__next_f.push([1,\"17:I[27911,[\\\"/_next/static/chunks/0f.nu7yupdhlo.js\\\",\\\"/_next/static/chunks/10-y2xkhi3uzl.js\\\",\\\"/_next/static/chunks/0vl35cp_n4rkq.js\\\",\\\"/_next/static/chunks/0jj~8w1nr9syu.js\\\"],\\\"IconMark\\\"]\\n11:null\\n16:[[\\\"$\\\",\\\"title\\\",\\\"0\\\",{\\\"children\\\":\\\"Create Next App\\\"}],[\\\"$\\\",\\\"meta\\\",\\\"1\\\",{\\\"name\\\":\\\"description\\\",\\\"content\\\":\\\"Generated by create next app\\\"}],[\\\"$\\\",\\\"link\\\",\\\"2\\\",{\\\"rel\\\":\\\"icon\\\",\\\"href\\\":\\\"/favicon.ico?favicon.0x3dzn~oxb6tn.ico\\\",\\\"sizes\\\":\\\"256x256\\\",\\\"type\\\":\\\"image/x-icon\\\"}],[\\\"$\\\",\\\"$L17\\\",\\\"3\\\",{}]]\\n\"])</script>\n    </body>\n</html>"
+            }
+          ]
+        },
+        {
+          "name": "CP-015: Validar eliminación de testimonio",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiMGYyMWNlNS01NDIyLTQyOTgtYjExMC1lYzkwNzZlY2Y1NjIiLCJlbWFpbCI6InVzZXJAZXhhbXBsZS5jb20iLCJvcmdhbml6YXRpb25JZCI6IjQ1NTI5OGQ5LTExMDItNDdhYy04ZWMwLWYzMGJlN2E4ZTI1YiIsInJvbGUiOiJPd25lciIsImlhdCI6MTc3NjE4NjI1MSwiZXhwIjoxNzc2MjcyNjUxfQ._aTg7ye5ECmXjBTCHl3Q9iLcrj7BFQbXAv06_91NufA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/testimonials/[ID_DEL_TESTIMONIO]",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "testimonials",
+                "[ID_DEL_TESTIMONIO]"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Bloqueo - Servidor local no disponible",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/testimonials/[ID_DEL_TESTIMONIO]",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "testimonials",
+                    "[ID_DEL_TESTIMONIO]"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": null,
+              "header": null,
+              "cookie": [],
+              "body": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

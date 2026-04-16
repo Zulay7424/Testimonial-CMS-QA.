@@ -1,0 +1,7 @@
+PROYECTO: Gestión de Auditoría QA - Testimonial CMS
+RESPONSABLE: Zulay Peraza
+
+Descripción: Este enlace dirige al tablero de gestión en Jira donde se planificaron y priorizaron las Historias de Usuario (HUs) para las Épicas 1, 2, 3 y 4. En el tablero podrá visualizar los estados de cada tarea, los criterios de aceptación y los comentarios de bloqueo técnico.
+
+Enlace Directo: https://zulayperaza.atlassian.net  
+       
