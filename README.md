@@ -17,4 +17,4 @@ Este repositorio contiene la documentación y evidencias de las pruebas de calid
 
 ---
 **QA Tester:** Zulay Peraza  
-*Asegurando la calidad y la excelencia en el desarrollo de software.*
+*Asegurando la calidad y la excelencia en el desarrollo de software."
